@@ -1,6 +1,7 @@
 === bbp last post ===
 Contributors: Robin Wilson
 Tags: forum, bbpress, bbp, last, post, freshness
+Donate link: http://www.rewweb.co.uk/donate
 Requires at least: 3.0.1
 Tested up to: 3.8.1
 Stable tag: 1.0
