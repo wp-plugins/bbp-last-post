@@ -17,7 +17,7 @@ It also allows you to set the heading for this new date format.
 
 The existing (bbpress) Recent Topics widget works with date, but a revised Recent Replies Widget to display the date format called (Last Post) Recent Replies is included.
 
-Works with wordpress 3.8.1 and bbpress 2.5.3
+Works with bbpress 2.5.3
 
 
 
