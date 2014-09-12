@@ -3,7 +3,7 @@ Contributors: Robin Wilson
 Tags: forum, bbpress, bbp, last, post, freshness
 Donate link: http://www.rewweb.co.uk/donate
 Requires at least: 3.0.1
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ It also allows you to set the heading for this new date format.
 
 The existing (bbpress) Recent Topics widget works with date, but a revised Recent Replies Widget to display the date format called (Last Post) Recent Replies is included.
 
-Works with bbpress 2.5.3
+Works with bbpress 2.5.4
 
 
 
