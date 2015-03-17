@@ -30,21 +30,22 @@ function change_freshness_forum () {
 add_filter( 'bbp_get_forum_last_active', 'change_freshness_forum', 10, 2 );
 
 //this function changes the bbp freshness data (time since) into a last post date for topics
-function change_freshness_topic () {
+function change_freshness_topic ($last_active, $topic_id) {
 
 $topic_id = bbp_get_topic_id( $topic_id );
 
 		// Try to get the most accurate freshness time possible
 		$last_active = get_post_meta( $topic_id, '_bbp_last_active_time', true );
 		if ( empty( $last_active ) ) {
-			$reply_id = bbp_get_topic_last_reply_id( $topic_id );
-			if ( !empty( $reply_id ) ) {
-				$last_active = get_post_field( 'post_date', $reply_id );
-			} else {
+		$reply_id = bbp_get_topic_last_reply_id( $topic_id );
+		if ( !empty( $reply_id ) ) {
+			$last_active = get_post_field( 'post_date', $reply_id );
+		} else {
 				$last_active = get_post_field( 'post_date', $topic_id );
 			}
 		}
-
+		
+		
 		$last_active = bbp_convert_date( $last_active ) ;
 		$date_format = get_option( 'date_format' );
 		$time_format = get_option( 'time_format' );

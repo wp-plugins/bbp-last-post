@@ -39,4 +39,5 @@ Works with bbpress 2.5.4
 
 
 == Changelog ==
+1.1 correction to topic freshness bug
 1.0 Version 1
