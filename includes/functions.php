@@ -30,7 +30,7 @@ function change_freshness_forum () {
 add_filter( 'bbp_get_forum_last_active', 'change_freshness_forum', 10, 2 );
 
 //this function changes the bbp freshness data (time since) into a last post date for topics
-function change_freshness_topic () {
+function change_freshness_topic ($topic_id = 0) {
 
 $topic_id = bbp_get_topic_id( $topic_id );
 
