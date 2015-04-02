@@ -4,7 +4,7 @@ Tags: forum, bbpress, bbp, last, post, freshness
 Donate link: http://www.rewweb.co.uk/donate
 Requires at least: 3.0.1
 Tested up to: 4.1.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,6 @@ Works with bbpress 2.5.4
 
 == Changelog ==
 
-1.2 internationalizatiin phase 1
+1.2 internationalization 
 1.1 correction to topic freshness bug
 1.0 Version 1
