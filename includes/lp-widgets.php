@@ -120,8 +120,8 @@ class Last_Post_Replies_Widget extends WP_Widget {
 						$time_format = get_option( 'time_format' );
 						$date= date( "{$date_format}", get_the_time( 'U' ) );
 						$time=date( "{$time_format}", get_the_time( 'U' ) );
-						$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbpress' ), $date, $time );  
-						printf( _x( '%1$s on %2$s %3$s', 'widgets', 'bbpress' ), $author_link, $reply_link, '<div>' .  $active_time  . '</div>' );
+						$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbp-last-post' ), $date, $time );  
+						printf( _x( '%1$s on %2$s %3$s', 'widgets', 'bbp-last-post' ), $author_link, $reply_link, '<div>' .  $active_time  . '</div>' );
 
 					// Reply link and timestamp
 					elseif ( ! empty( $settings['show_date'] ) ) :
@@ -131,20 +131,20 @@ class Last_Post_Replies_Widget extends WP_Widget {
 						$time_format = get_option( 'time_format' );
 						$date= date( "{$date_format}", get_the_time( 'U' ) );
 						$time=date( "{$time_format}", get_the_time( 'U' ) );
-						$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbpress' ), $date, $time );  
-						printf( _x( '%1$s %2$s',         'widgets', 'bbpress' ), $reply_link,  '<div>' . $active_time  . '</div>'              );
+						$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbp-last-post' ), $date, $time );  
+						printf( _x( '%1$s %2$s',         'widgets', 'bbp-last-post' ), $reply_link,  '<div>' . $active_time  . '</div>'              );
 
 					// Reply author and title
 					elseif ( !empty( $author_link ) ) :
 
 						// translators: 1: reply author, 2: reply link
-						printf( _x( '%1$s on %2$s',      'widgets', 'bbpress' ), $author_link, $reply_link                                                                 );
+						printf( _x( '%1$s on %2$s',      'widgets', 'bbp-last-post' ), $author_link, $reply_link                                                                 );
 
 					// Only the reply title
 					else :
 
 						// translators: 1: reply link
-						printf( _x( '%1$s',              'widgets', 'bbpress' ), $reply_link                                                                               );
+						printf( _x( '%1$s',              'widgets', 'bbp-last-post' ), $reply_link                                                                               );
 
 					endif;
 
@@ -194,10 +194,10 @@ class Last_Post_Replies_Widget extends WP_Widget {
 		// Get widget settings
 		$settings = $this->parse_settings( $instance ); ?>
 
-		<p><label for="<?php echo $this->get_field_id( 'title'     ); ?>"><?php _e( 'Title:',                   'bbpress' ); ?> <input class="widefat" id="<?php echo $this->get_field_id( 'title'     ); ?>" name="<?php echo $this->get_field_name( 'title'     ); ?>" type="text" value="<?php echo esc_attr( $settings['title']     ); ?>" /></label></p>
-		<p><label for="<?php echo $this->get_field_id( 'max_shown' ); ?>"><?php _e( 'Maximum replies to show:', 'bbpress' ); ?> <input class="widefat" id="<?php echo $this->get_field_id( 'max_shown' ); ?>" name="<?php echo $this->get_field_name( 'max_shown' ); ?>" type="text" value="<?php echo esc_attr( $settings['max_shown'] ); ?>" /></label></p>
-		<p><label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Show post date:',          'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" <?php checked( true, $settings['show_date'] ); ?> value="1" /></label></p>
-		<p><label for="<?php echo $this->get_field_id( 'show_user' ); ?>"><?php _e( 'Show reply author:',       'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_user' ); ?>" name="<?php echo $this->get_field_name( 'show_user' ); ?>" <?php checked( true, $settings['show_user'] ); ?> value="1" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'title'     ); ?>"><?php _e( 'Title:',                   'bbp-last-post' ); ?> <input class="widefat" id="<?php echo $this->get_field_id( 'title'     ); ?>" name="<?php echo $this->get_field_name( 'title'     ); ?>" type="text" value="<?php echo esc_attr( $settings['title']     ); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'max_shown' ); ?>"><?php _e( 'Maximum replies to show:', 'bbp-last-post' ); ?> <input class="widefat" id="<?php echo $this->get_field_id( 'max_shown' ); ?>" name="<?php echo $this->get_field_name( 'max_shown' ); ?>" type="text" value="<?php echo esc_attr( $settings['max_shown'] ); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Show post date:',          'bbp-last-post' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" <?php checked( true, $settings['show_date'] ); ?> value="1" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'show_user' ); ?>"><?php _e( 'Show reply author:',       'bbp-last-post' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_user' ); ?>" name="<?php echo $this->get_field_name( 'show_user' ); ?>" <?php checked( true, $settings['show_user'] ); ?> value="1" /></label></p>
 
 		<?php
 	}
@@ -212,7 +212,7 @@ class Last_Post_Replies_Widget extends WP_Widget {
 	 */
 	public function parse_settings( $instance = array() ) {
 		return bbp_parse_args( $instance, array(
-			'title'     => __( 'Recent Replies', 'bbpress' ),
+			'title'     => __( 'Recent Replies', 'bbp-last-post' ),
 			'max_shown' => 5,
 			'show_date' => false,
 			'show_user' => false

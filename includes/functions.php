@@ -24,7 +24,7 @@ function change_freshness_forum () {
 		$time_format = get_option( 'time_format' );
 		$date= date( "{$date_format}", $last_active );
 		$time=date( "{$time_format}", $last_active );
-		$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbpress' ), $date, $time );  
+		$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbp-last-post' ), $date, $time );  
 		return $active_time ;
 		}
 add_filter( 'bbp_get_forum_last_active', 'change_freshness_forum', 10, 2 );
@@ -51,14 +51,13 @@ $topic_id = bbp_get_topic_id( $topic_id );
 		$time_format = get_option( 'time_format' );
 		$date= date( "{$date_format}", $last_active );
 		$time=date( "{$time_format}", $last_active );
-		$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbpress' ), $date, $time );  
+		$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbp-last-post' ), $date, $time );  
 		return $active_time ;
 		}
 add_filter( 'bbp_get_topic_last_active', 'change_freshness_topic', 10, 2 );
 
 //This function changes the heading "Freshness" to the name created in Settings>bbp last post
 function change_translate_text( $translated_text ) {
-	//$text = __( 'Freshness', 'bbpress' );
 	$text = 'Freshness' ;
 	if ( $translated_text == $text ) {
 	global $rlp_options;
