@@ -28,10 +28,10 @@ class Last_Post_Replies_Widget extends WP_Widget {
 	public function __construct() {
 		$widget_ops = apply_filters( 'last_post_replies_widget_options', array(
 			'classname'   => 'widget_display_replies',
-			'description' => __( 'A list of the most recent replies.', 'bbpress' )
+			'description' => __( 'A list of the most recent replies.', 'bbp-last-post' )
 		) );
 
-		parent::__construct( false, __( '(Last Post) Recent Replies', 'bbpress' ), $widget_ops );
+		parent::__construct( false, __( '(Last Post) Recent Replies', 'bbp-last-post' ), $widget_ops );
 	}
 
 	/**

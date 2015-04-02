@@ -58,7 +58,9 @@ add_filter( 'bbp_get_topic_last_active', 'change_freshness_topic', 10, 2 );
 
 //This function changes the heading "Freshness" to the name created in Settings>bbp last post
 function change_translate_text( $translated_text ) {
-	if ( $translated_text == 'Freshness' ) {
+	//$text = __( 'Freshness', 'bbpress' );
+	$text = 'Freshness' ;
+	if ( $translated_text == $text ) {
 	global $rlp_options;
 	$translated_text = $rlp_options['heading_label'];
 	}

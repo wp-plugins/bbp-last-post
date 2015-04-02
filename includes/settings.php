@@ -17,7 +17,7 @@ function rlp_settings_page()
 				$_REQUEST['updated'] = false;
 			?>
 			<?php if ( false !== $_REQUEST['updated'] ) : ?>
-			<div class="updated fade"><p><strong><?php _e( 'name saved', 'bbp-last-post'); ?> ); ?></strong></p></div>
+			<div class="updated fade"><p><strong><?php _e( 'Name saved', 'bbp-last-post'); ?> ); ?></strong></p></div>
 			<?php endif; ?>
 			
 			
@@ -45,8 +45,8 @@ function rlp_settings_page()
 				<table class="form-table">
 					
 					<tr valign="top">
-						<th colspan="2"><p> This plugin changes the freshness (eg. 4 hours ago) display on forums and topics to date and time of last post.
-						The name below sets the heading of this column. </p></th>
+						<th colspan="2"><p> <?php _e('This plugin changes the freshness (eg. 4 hours ago) display on forums and topics to date and time of last post.
+						The name below sets the heading of this column.', 'bbp-last-post') ?> </p></th>
 					</tr>
 					
 					<tr>
