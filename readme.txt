@@ -40,6 +40,7 @@ Works with bbpress 2.5.4
 
 == Changelog ==
 
+1.3 internationization phase 2 - correct date not diaplying
 1.2 internationalization 
 1.1 correction to topic freshness bug
 1.0 Version 1

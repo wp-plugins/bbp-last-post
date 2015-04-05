@@ -22,8 +22,8 @@ function change_freshness_forum () {
 		$last_active = bbp_convert_date( $last_active ) ;
 		$date_format = get_option( 'date_format' );
 		$time_format = get_option( 'time_format' );
-		$date= date( "{$date_format}", $last_active );
-		$time=date( "{$time_format}", $last_active );
+		$date= date_i18n( "{$date_format}", $last_active );
+		$time=date_i18n( "{$time_format}", $last_active );
 		$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbp-last-post' ), $date, $time );  
 		return $active_time ;
 		}
@@ -49,8 +49,8 @@ $topic_id = bbp_get_topic_id( $topic_id );
 		$last_active = bbp_convert_date( $last_active ) ;
 		$date_format = get_option( 'date_format' );
 		$time_format = get_option( 'time_format' );
-		$date= date( "{$date_format}", $last_active );
-		$time=date( "{$time_format}", $last_active );
+		$date= date_i18n( "{$date_format}", $last_active );
+		$time=date_i18n( "{$time_format}", $last_active );
 		$active_time = sprintf( _x( '%1$s at %2$s', 'date at time', 'bbp-last-post' ), $date, $time );  
 		return $active_time ;
 		}

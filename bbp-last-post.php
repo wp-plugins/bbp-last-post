@@ -4,7 +4,7 @@
 Plugin Name: bbP last post
 Plugin URI: http://www.rewweb.co.uk/bbp-last-post-plugin/
 Description: This Plugin changes the 'freshness ' (eg 4 hours ago) that bbPress displays on topic and forum lists to the date of the last post to that forum or topic (eg 17th January 2014 at 5.15pm)
-Version: 1.2
+Version: 1.3
 Author: Robin Wilson
 Text Domain: bbp-last-post
 Author URI: http://www.rewweb.co.uk
